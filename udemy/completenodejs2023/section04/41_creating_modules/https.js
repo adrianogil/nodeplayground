@@ -8,3 +8,5 @@ function makeRequest(url, data) {
 
 const responseData = makeRequest('https://www.google.com', 'my_data');
 console.log(responseData)
+
+console.log(require.cache)

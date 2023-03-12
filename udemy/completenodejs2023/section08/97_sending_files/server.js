@@ -1,7 +1,10 @@
 const express = require('express');
+var path = require('path');
+
 const friendsRoutes = require('./routes/friends.router');
 const messagesRoutes = require('./routes/messages.router');
 
+global.appRoot = path.resolve(__dirname);
 const app = express();
 
 const PORT = 3000;

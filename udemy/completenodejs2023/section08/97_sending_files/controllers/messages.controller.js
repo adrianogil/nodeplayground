@@ -17,7 +17,7 @@ function getMessages(req, res) {
 }
 
 function getMessageImage(req, res) {
-    const filePath = path.join(__dirname, 'images', 'skimountain.jpg');
+    const filePath = path.join(global.appRoot, 'public', 'images', 'skimountain.jpg');
     console.log(`Sending file ${filePath}`)
     res.sendFile(filePath);
 }

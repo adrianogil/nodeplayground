@@ -1,5 +1,4 @@
 const express = require('express');
-const cluster = require('cluster');
 const os = require('os');
 
 const app = express();
@@ -21,18 +20,9 @@ app.get('/timer', (req, res) => {
     res.send('Ding ding ding');
 });
 
-if (cluster.isMaster) {
-    console.log(`Master ${process.pid} is running`);
 
-    const NUM_WORKERS = os.cpus().length;
-    console.log(`Forking ${NUM_WORKERS} workers`);
-    for (let i = 0; i < NUM_WORKERS; i++) {
-        cluster.fork();
-    }
-} else {
-    console.log(`Worker ${process.pid} started`);
+console.log(`Worker ${process.pid} started`);
 
-    app.listen(3000, () => {
-        console.log('Server is listening on port 3000');
-    });
-}
+app.listen(3000, () => {
+    console.log('Server is listening on port 3000');
+});

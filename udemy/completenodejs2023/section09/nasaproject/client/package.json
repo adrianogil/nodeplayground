@@ -35,5 +35,8 @@
   },
   "overrides": {
     "nth-check@1.0.2": "2.0.1"
+  },
+  "engines": {
+    "node": ">=24.0.0"
   }
 }

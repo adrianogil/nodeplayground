@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WebSocket Messaging Demo</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Node.js 24 WebSocket Demo</p>
+          <h1>Message Lounge</h1>
+          <p class="subtitle">Send realtime messages, emoji, and images to everyone connected.</p>
+        </div>
+        <div class="status" id="connectionStatus">Connecting…</div>
+      </header>
+
+      <main class="chat">
+        <section class="chat-panel">
+          <h2>Live Feed</h2>
+          <ul id="messageList" class="message-list" aria-live="polite"></ul>
+        </section>
+
+        <aside class="composer">
+          <h2>Compose</h2>
+          <label class="field">
+            <span>Display name</span>
+            <input type="text" id="displayName" placeholder="Guest" maxlength="32" />
+          </label>
+
+          <label class="field">
+            <span>Message</span>
+            <textarea id="messageInput" rows="4" placeholder="Write something fun..." maxlength="500"></textarea>
+          </label>
+
+          <div class="emoji-row" role="group" aria-label="Emoji quick add">
+            <button type="button" class="emoji" data-emoji="😀">😀</button>
+            <button type="button" class="emoji" data-emoji="🎉">🎉</button>
+            <button type="button" class="emoji" data-emoji="🔥">🔥</button>
+            <button type="button" class="emoji" data-emoji="💬">💬</button>
+            <button type="button" class="emoji" data-emoji="🚀">🚀</button>
+          </div>
+
+          <label class="field">
+            <span>Share an image</span>
+            <input type="file" id="imageInput" accept="image/*" />
+          </label>
+
+          <button type="button" id="sendButton" class="primary">Send message</button>
+
+          <p class="hint">Tip: press Enter to send a message, Shift + Enter for a new line.</p>
+        </aside>
+      </main>
+    </div>
+
+    <script src="/js/app.js"></script>
+  </body>
+</html>

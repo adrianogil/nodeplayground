@@ -1,0 +1,19 @@
+{
+  "name": "websocketmessaging",
+  "version": "1.0.0",
+  "description": "Node.js 24 WebSocket messaging demo",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "websocket",
+    "demo",
+    "node"
+  ],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=24.0.0"
+  }
+}
